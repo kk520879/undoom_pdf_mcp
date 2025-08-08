@@ -1,0 +1,46 @@
+[project]
+name = "undoom-pdf-mcp"
+version = "0.2.0"
+description = "PDF转换工具MCP服务器，集成PDF转图片、Office文件转PDF等功能"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "undoom", email = "kaikaihuhu666@163.com"}
+]
+license = {text = "MIT"}
+keywords = ["mcp", "pdf", "converter", "office", "image"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+    "Topic :: Office/Business :: Office Suites",
+]
+dependencies = [
+    "mcp[cli]>=1.12.4",
+    "PyMuPDF>=1.23.0",
+    "Pillow>=10.0.0",
+    "pywin32>=306; sys_platform == 'win32'",
+    "tkinterdnd2>=0.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kk520879/undoom_pdf_mcp"
+Repository = "https://github.com/kk520879/undoom_pdf_mcp"
+Issues = "https://github.com/kk520879/undoom_pdf_mcp/issues"
+
+[project.scripts]
+undoom-pdf-mcp = "undoom_pdf_mcp.main:main"
+
+[[tool.uv.index]]
+name = "tsinghua"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+default = true

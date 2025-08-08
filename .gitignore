@@ -1,0 +1,39 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files and examples
+test_*.py
+*.pdf
+*.docx
+*.xlsx
+*.pptx
+*_images/
+*.jpg
+*.png
+
+# Documentation files (keep only README.md)
+pdf功能.md
+文件类型转换mcp.md
+
+# Lock files
+uv.lock
