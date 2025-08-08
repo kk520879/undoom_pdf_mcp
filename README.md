@@ -2,7 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.2.0-orange.svg)](https://github.com/kk520879/undoom_pdf_mcp)
+[![Version](https://img.shields.io/badge/version-0.2.3-orange.svg)](https://github.com/kk520879/undoom_pdf_mcp)
 
 一个功能强大的PDF转换工具MCP服务器，基于MCP (Model Context Protocol) 协议，集成了多种文件转换功能。
 
@@ -88,6 +88,52 @@ uv run python undoom_pdf_mcp/main.py
 # 或直接运行
 python undoom_pdf_mcp/main.py
 ```
+
+### MCP客户端配置
+
+#### 方法1: 使用uvx（推荐）
+
+包已发布到PyPI，可以直接使用uvx安装：
+
+```json
+{
+  "mcpServers": {
+    "undoom-pdf-mcp": {
+      "command": "uvx",
+      "args": [
+        "--index-url",
+        "https://pypi.tuna.tsinghua.edu.cn/simple",
+        "undoom-pdf-mcp"
+      ]
+    }
+  }
+}
+```
+
+**注意**: 配置中使用了清华大学PyPI镜像源以提高下载速度和稳定性。
+
+#### 方法2: 本地开发配置
+
+如果你是从源码运行，可以使用以下配置：
+
+```json
+{
+  "mcpServers": {
+    "undoom-pdf-mcp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "/path/to/your/undoom_pdf_mcp",
+        "run",
+        "python",
+        "undoom_pdf_mcp/main.py"
+      ]
+    }
+  }
+}
+```
+
+将上述配置添加到你的MCP客户端配置文件中（如Claude Desktop的配置文件）。
 
 ## 主要依赖
 
@@ -301,6 +347,16 @@ undoom_pdf_mcp/
 5. 打开 Pull Request
 
 ## 📝 更新日志
+
+### v0.2.3 (2024-12-19)
+- 🐛 修复uvx运行时的协程错误
+- 🔧 改进异步入口点处理
+- 📦 发布到PyPI，支持uvx直接安装
+- 🚀 优化MCP服务器启动流程
+
+### v0.2.2 (2024-12-19)
+- 🔧 优化MCP配置
+- 📚 更新文档和配置示例
 
 ### v0.2.0 (2024-12-19)
 - ✨ 新增PDF加密功能

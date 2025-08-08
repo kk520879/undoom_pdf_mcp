@@ -1,6 +1,6 @@
 [project]
 name = "undoom-pdf-mcp"
-version = "0.2.0"
+version = "0.2.3"
 description = "PDF转换工具MCP服务器，集成PDF转图片、Office文件转PDF等功能"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -38,7 +38,11 @@ Repository = "https://github.com/kk520879/undoom_pdf_mcp"
 Issues = "https://github.com/kk520879/undoom_pdf_mcp/issues"
 
 [project.scripts]
-undoom-pdf-mcp = "undoom_pdf_mcp.main:main"
+undoom-pdf-mcp = "undoom_pdf_mcp.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [[tool.uv.index]]
 name = "tsinghua"

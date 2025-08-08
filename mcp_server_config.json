@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "undoom-pdf-mcp": {
+      "command": "uvx",
+      "args": ["--index-url", "https://pypi.tuna.tsinghua.edu.cn/simple", "undoom-pdf-mcp"]
+    }
+  }
+}

@@ -4,6 +4,6 @@
 集成了PDF转图片、Office文件转PDF等功能。
 """
 
-__version__ = "0.2.0"
+__version__ = "0.2.3"
 __author__ = "undoom"
 __email__ = "kaikaihuhu666@163.com"
